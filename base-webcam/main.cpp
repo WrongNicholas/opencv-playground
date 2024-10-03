@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
       break;
     }
 
-    imshow("Face Detection", frame);
+    imshow("Webcam", frame);
 
     if (waitKey(30) == 'q') break;
   }

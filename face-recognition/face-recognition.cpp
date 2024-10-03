@@ -6,7 +6,7 @@ using namespace std;
 int main(int argc, char *argv[]) {
 
   if (argc != 2) {
-    std::cerr << "Usage: " << argv[0] << "[camera device ID]" << std::endl;
+    std::cerr << "Usage: " << argv[0] << " [camera device ID]" << std::endl;
     return -1;
   }
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
     for (size_t i = 0; i < faces.size(); i++)
       rectangle(frame, faces[i], Scalar(255, 0, 0), 2);
 
-    imshow("Face Detection", frame);
+    imshow("Face Recognition", frame);
 
     if (waitKey(30) == 'q') break;
   }

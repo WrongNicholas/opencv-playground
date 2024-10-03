@@ -1,3 +1,6 @@
+// THIS PROJECT BARELY WORKS!
+// IT WILL PROBABLY LOOK TERRIBLE!
+
 #include <opencv2/opencv.hpp>
 #include <thread>
 #include <chrono>
@@ -5,6 +8,11 @@
 using namespace cv;
 
 int main(int argc, char *argv[]) {
+
+  if (argc != 2) {
+    std::cerr << "Usage: " << argv[0] << " [path/to/video]" << std::endl;
+    return -1;
+  }
 
   VideoCapture video(argv[1]);
   if (!video.isOpened()) {

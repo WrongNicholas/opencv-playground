@@ -2,10 +2,15 @@
 
 using namespace cv;
 
-int main() {
-  
-  VideoCapture video(1);
+int main(int argc, char *argv[]) {
+ 
+  if (argc != 2) {
+    std::cerr << "Usage: " << argv[0] << " [camera device ID]" << std::endl;
+    return -1;
+  }
 
+  VideoCapture video(std::stoi(argv[1]));
+  
   if (!video.isOpened()) {
     std::cerr << "ERROR COULD NOT OPEN VIDEO" << std::endl;
     return -1;

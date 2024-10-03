@@ -6,7 +6,7 @@ LDFLAGS = -L/opt/homebrew/Cellar/opencv/4.10.0_9/lib -lopencv_core -lopencv_vide
 
 SRC = main.cpp
 
-TARGET = video_reader
+TARGET = project
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)

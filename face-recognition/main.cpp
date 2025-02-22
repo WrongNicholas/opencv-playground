@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
   }
 
   CascadeClassifier cascade;
-  if (!cascade.load("/opt/homebrew/Cellar/opencv/4.10.0_14/share/opencv4/haarcascades/haarcascade_frontalface_default.xml")) {
+  if (!cascade.load("/opt/homebrew/Cellar/opencv/4.11.0_1/share/opencv4/haarcascades/haarcascade_frontalface_default.xml")) {
     std::cerr << "ERROR: COULD NOT LOAD HAARCASCADE" << std::endl;
   }
 
